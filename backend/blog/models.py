@@ -34,7 +34,7 @@ class BlogPost(models.Model):
     day = models.CharField(max_length=2)
 
     # CONTENIDO O BODY
-    content = models.TextField()       
+    content = models.TextField()      # soporta imagenes y texto enriquecido, se configura en las urls y admin  
     featured = models.BooleanField(default=False)
     date_created = models.DateTimeField(default=datetime.now, blank=True)
 

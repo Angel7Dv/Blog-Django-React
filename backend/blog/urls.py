@@ -7,3 +7,4 @@ urlpatterns = [
     path('category', BlogPostCategoryView.as_view()),
     path('<slug>', BlogPostDetailView.as_view()),
 ]
+
