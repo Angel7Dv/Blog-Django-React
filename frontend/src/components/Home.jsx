@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const home = () => (
+const Home = () => (
     <div className='container'>
         <div className="jumbotron mt-5">
             <h1 className="display-4">Welcome to Blog Lyfe!</h1>
@@ -10,7 +10,13 @@ const home = () => (
             <p>Click the button below to check out our awesome blog.</p>
             <Link className="btn btn-primary btn-lg" to='/blog' role="button">Check out our Blog</Link>
         </div>
+
+
+
+    
+
+
     </div>
 );
 
-export default home;
+export default Home;
