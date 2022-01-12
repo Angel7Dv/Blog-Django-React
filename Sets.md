@@ -233,3 +233,7 @@ urlpatterns = [
 ]
 
 
+# Frontend
+
+npm install --save axios react-router-dom
+
