@@ -2,7 +2,10 @@ import React from 'react';
 import { 
     BrowserRouter as Router,
     Routes,
-    Route,    
+    Route,  
+    Navigate,
+    NavLink
+    
   } from 'react-router-dom'
 import Layout from './hocs/Layout';
 import Home from './components/Home';
@@ -12,6 +15,8 @@ import Category from './components/Category';
 import BlogList from './components/Blist';
 import BlogListDetail from './components/BlistDetail';
 import NoFoundPage from './components/NoFoundPage';
+import Ruta from './router/Ruta';
+import RutaAnidada from './router/RutaAnidada';
 
 const App = () => (
     <Router>
@@ -19,9 +24,14 @@ const App = () => (
         <Layout/>
         
         <Routes>
+            <Route path="ruta/*" element={<Ruta />} > 
+           
+                <Route path="rutaAnidada" element={<RutaAnidada/>} />       
+
+            </Route>
+
+
             
-
-
             <Route exact="true" path="/" element={<Home />} />
             <Route exact="true" path="/blog" element={<Blog />} />
             <Route exact="true" path='/blog/:slug' element={<BlogDetail />} />
@@ -39,8 +49,11 @@ const App = () => (
 
 
             {/* NO FOUND PAGE */}
-            <Route  path="*" element={<NoFoundPage />} />
+            {/* <Route  path="*" element={<NoFoundPage />} /> */}
+            <Route  path="*" element={<Navigate to="/" />} />
             {/* NO FOUND PAGE */}
+
+
 
 
         </Routes>
