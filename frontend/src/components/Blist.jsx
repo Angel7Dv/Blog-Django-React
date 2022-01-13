@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, {Fragment, useEffect, useState} from 'react'
-import { Link} from 'react-router-dom';
+import { Link,  Routes, Route } from 'react-router-dom';
+import BlistDetail from './BlistDetail';
 
 
 
-
-const BlogList = () => {
+const Blist = () => {
 
     // GET BLOGS
     const [blogsList, setBlogsList] = useState([]);
@@ -58,9 +58,16 @@ const BlogList = () => {
 
             <hr />
 
+{/*             
+
+            <Routes>
+                <Route path={`${iten.slug}`} element={<BlistDetail />} />
+            </Routes> */}
+
 
 
           </div>
+
           
             
             )}
@@ -70,4 +77,4 @@ const BlogList = () => {
     )
 }
 
-export default BlogList
+export default Blist

@@ -22,7 +22,7 @@ const navbar = () => (
                     <NavLink className={(is_active)=> is_active ? "active" : "" ,"nav-link "  } to='/'>Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink  style={({ isActive }) => ({ color: isActive ? 'green' : 'blue' })} to='/'>Home</NavLink>
+                <NavLink className="btn btn-success" to="ruta"> Ruta link</NavLink>
                 </li>
                 <li className="nav-item ">
                     <NavLink className="nav-link" to='/blog'>Blog <span className="sr-only">(current)</span></NavLink>
